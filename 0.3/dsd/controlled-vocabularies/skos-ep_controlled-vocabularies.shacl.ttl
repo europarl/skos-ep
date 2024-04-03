@@ -1,0 +1,286 @@
+@prefix schema: <http://schema.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos-ep: <https://data.europarl.europa.eu/def/skos-ep#> .
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix voc: <https://data.europarl.europa.eu/def/controlled-vocabularies> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix eli: <http://data.europa.eu/eli/ontology#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix xls2rdf: <https://xls2rdf.sparna.fr/vocabulary#> .
+@prefix eli-dl: <http://data.europa.eu/eli/eli-draft-legislation-ontology#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
+@prefix shacl-play: <https://shacl-play.sparna.fr/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix person: <http://www.w3.org/ns/person#> .
+@prefix epvoc: <https://data.europarl.europa.eu/def/epvoc#> .
+@prefix op-aut: <http://publications.europa.eu/resource/authority/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+
+<https://data.europarl.europa.eu/def/controlled-vocabulariesP9> owl:versionInfo "0.1";
+  sh:path rdf:type;
+  sh:name "type"@en;
+  sh:minCount "1"^^xsd:integer;
+  sh:maxCount "1"^^xsd:integer;
+  sh:hasValue skos:ConceptScheme .
+
+<https://data.europarl.europa.eu/def/controlled-vocabulariesConceptScheme> a sh:NodeShape;
+  sh:property <https://data.europarl.europa.eu/def/controlled-vocabulariesP9>, <https://data.europarl.europa.eu/def/controlled-vocabulariesP10>,
+    <https://data.europarl.europa.eu/def/controlled-vocabulariesP11>, <https://data.europarl.europa.eu/def/controlled-vocabulariesP12>,
+    <https://data.europarl.europa.eu/def/controlled-vocabulariesP13>, <https://data.europarl.europa.eu/def/controlled-vocabulariesP14>,
+    <https://data.europarl.europa.eu/def/controlled-vocabulariesP15>, <https://data.europarl.europa.eu/def/controlled-vocabulariesP16>,
+    <https://data.europarl.europa.eu/def/controlled-vocabulariesP17>;
+  owl:versionInfo "0.1";
+  rdfs:comment "This node shape refers to the class skos:ConceptScheme"@en;
+  sh:targetClass skos:ConceptScheme;
+  skos:example "https://data.europarl.europa.eu/def/ep-procedure-types";
+  sh:nodeKind sh:IRI;
+  sh:pattern "^https://data.europarl.europa.eu/def/[A-Za-z0-9\\-_]+$";
+  sh:closed "true"^^xsd:boolean;
+  rdfs:label "Concept Scheme"@en;
+  sh:order "1"^^xsd:integer .
+
+<https://data.europarl.europa.eu/def/controlled-vocabulariesP10> owl:versionInfo "0.1";
+  sh:path dcterms:identifier;
+  sh:name "identifier"@en;
+  sh:minCount "1"^^xsd:integer;
+  sh:maxCount "1"^^xsd:integer;
+  sh:nodeKind sh:Literal;
+  sh:datatype xsd:string .
+
+<https://data.europarl.europa.eu/def/controlled-vocabulariesP11> owl:versionInfo "0.1";
+  sh:path dcterms:title;
+  sh:name "title"@en;
+  sh:minCount "1"^^xsd:integer;
+  sh:nodeKind sh:Literal;
+  sh:datatype rdf:langString;
+  sh:uniqueLang "true"^^xsd:boolean .
+
+<https://data.europarl.europa.eu/def/controlled-vocabulariesP12> owl:versionInfo "0.1";
+  sh:path dcterms:description;
+  sh:name "description"@en;
+  sh:minCount "1"^^xsd:integer;
+  sh:nodeKind sh:Literal;
+  sh:datatype rdf:langString;
+  sh:uniqueLang "true"^^xsd:boolean .
+
+<https://data.europarl.europa.eu/def/controlled-vocabulariesP13> owl:versionInfo "0.2";
+  sh:path dcterms:created;
+  sh:name "created"@en;
+  sh:minCount "1"^^xsd:integer;
+  sh:maxCount "1"^^xsd:integer;
+  sh:nodeKind sh:Literal;
+  sh:datatype xsd:date .
+
+<https://data.europarl.europa.eu/def/controlled-vocabulariesP14> owl:versionInfo "0.2";
+  sh:path dcterms:modified;
+  sh:name "modified"@en;
+  sh:minCount "1"^^xsd:integer;
+  sh:maxCount "1"^^xsd:integer;
+  sh:nodeKind sh:Literal;
+  sh:datatype xsd:date .
+
+<https://data.europarl.europa.eu/def/controlled-vocabulariesP15> owl:versionInfo "0.1";
+  sh:path owl:versionInfo;
+  sh:name "version info"@en;
+  sh:minCount "1"^^xsd:integer;
+  sh:maxCount "1"^^xsd:integer;
+  sh:nodeKind sh:Literal;
+  sh:datatype xsd:string;
+  sh:uniqueLang "true"^^xsd:boolean .
+
+<https://data.europarl.europa.eu/def/controlled-vocabulariesP16> owl:versionInfo "0.3";
+  sh:path dcterms:creator;
+  sh:name "creator"@en;
+  sh:minCount "1"^^xsd:integer;
+  sh:maxCount "1"^^xsd:integer;
+  sh:nodeKind sh:IRI;
+  sh:hasValue <https://publications.europa.eu/resource/authority/corporate-body/EP> .
+
+<https://data.europarl.europa.eu/def/controlled-vocabulariesP17> owl:versionInfo "0.1";
+  sh:path _:a4aeb3f30c2042e3b539bc99a24f35721741;
+  sh:name "inverse_inScheme"@en;
+  sh:nodeKind sh:IRI;
+  sh:node <https://data.europarl.europa.eu/def/controlled-vocabulariesConcept> .
+
+_:a4aeb3f30c2042e3b539bc99a24f35721741 sh:inversePath skos:inScheme .
+
+<https://data.europarl.europa.eu/def/controlled-vocabulariesP20> owl:versionInfo "0.1";
+  sh:path rdf:type;
+  sh:name "type"@en;
+  sh:minCount "1"^^xsd:integer;
+  sh:maxCount "1"^^xsd:integer;
+  sh:hasValue skos:Concept .
+
+<https://data.europarl.europa.eu/def/controlled-vocabulariesConcept> a sh:NodeShape;
+  sh:property <https://data.europarl.europa.eu/def/controlled-vocabulariesP20>, <https://data.europarl.europa.eu/def/controlled-vocabulariesP21>,
+    <https://data.europarl.europa.eu/def/controlled-vocabulariesP22>, <https://data.europarl.europa.eu/def/controlled-vocabulariesP23>,
+    <https://data.europarl.europa.eu/def/controlled-vocabulariesP24>, <https://data.europarl.europa.eu/def/controlled-vocabulariesP25>,
+    <https://data.europarl.europa.eu/def/controlled-vocabulariesP26>, <https://data.europarl.europa.eu/def/controlled-vocabulariesP27>,
+    <https://data.europarl.europa.eu/def/controlled-vocabulariesP28>, <https://data.europarl.europa.eu/def/controlled-vocabulariesP29>,
+    <https://data.europarl.europa.eu/def/controlled-vocabulariesP30>, <https://data.europarl.europa.eu/def/controlled-vocabulariesP31>,
+    <https://data.europarl.europa.eu/def/controlled-vocabulariesP32>, <https://data.europarl.europa.eu/def/controlled-vocabulariesP33>;
+  owl:versionInfo "0.3";
+  rdfs:comment "This node shape refers to the class skos:Concept"@en;
+  sh:targetClass skos:Concept;
+  skos:example "https://data.europarl.europa.eu/def/ep-procedure-types/COD";
+  sh:nodeKind sh:IRI;
+  sh:pattern "^https://data.europarl.europa.eu/def/[A-Za-z0-9\\-_]+/[A-Z\\-_]+$";
+  sh:closed "true"^^xsd:boolean;
+  rdfs:label "Concept"@en;
+  sh:order "2"^^xsd:integer .
+
+<https://data.europarl.europa.eu/def/controlled-vocabulariesP21> owl:versionInfo "0.1";
+  sh:path dcterms:identifier;
+  sh:name "identifier"@en;
+  sh:minCount "1"^^xsd:integer;
+  sh:maxCount "1"^^xsd:integer;
+  sh:nodeKind sh:Literal;
+  sh:datatype xsd:string .
+
+<https://data.europarl.europa.eu/def/controlled-vocabulariesP22> owl:versionInfo "0.2";
+  sh:path dcterms:created;
+  sh:name "created"@en;
+  sh:minCount "1"^^xsd:integer;
+  sh:maxCount "1"^^xsd:integer;
+  sh:nodeKind sh:Literal;
+  sh:datatype xsd:date .
+
+<https://data.europarl.europa.eu/def/controlled-vocabulariesP23> owl:versionInfo "0.3";
+  sh:path skos:definition;
+  sh:name "definition"@en;
+  sh:nodeKind sh:Literal;
+  sh:datatype rdf:langString;
+  sh:uniqueLang "true"^^xsd:boolean .
+
+<https://data.europarl.europa.eu/def/controlled-vocabulariesP24> owl:versionInfo "0.1";
+  sh:path skos:notation;
+  sh:name "notation"@en;
+  sh:nodeKind sh:Literal;
+  sh:datatype xsd:string .
+
+<https://data.europarl.europa.eu/def/controlled-vocabulariesP25> owl:versionInfo "0.1";
+  sh:path skos:prefLabel;
+  sh:name "preferred label"@en;
+  sh:minCount "1"^^xsd:integer;
+  sh:nodeKind sh:Literal;
+  sh:datatype rdf:langString;
+  sh:uniqueLang "true"^^xsd:boolean .
+
+<https://data.europarl.europa.eu/def/controlled-vocabulariesP26> owl:versionInfo "0.3";
+  sh:path skos:altLabel;
+  sh:name "alternative label"@en;
+  sh:nodeKind sh:Literal;
+  sh:datatype rdf:langString;
+  sh:uniqueLang "true"^^xsd:boolean .
+
+<https://data.europarl.europa.eu/def/controlled-vocabulariesP27> owl:versionInfo "0.1";
+  sh:path skos:inScheme;
+  sh:name "in scheme"@en;
+  sh:minCount "1"^^xsd:integer;
+  sh:nodeKind sh:IRI;
+  sh:node <https://data.europarl.europa.eu/def/controlled-vocabulariesConceptScheme>;
+  sh:deactivated "true"^^xsd:boolean .
+
+<https://data.europarl.europa.eu/def/controlled-vocabulariesP28> owl:versionInfo "0.1";
+  sh:path skos:topConceptOf;
+  sh:name "top concept of"@en;
+  sh:nodeKind sh:IRI;
+  sh:node <https://data.europarl.europa.eu/def/controlled-vocabulariesConceptScheme>;
+  sh:deactivated "true"^^xsd:boolean .
+
+<https://data.europarl.europa.eu/def/controlled-vocabulariesP29> owl:versionInfo "0.1";
+  sh:path skos:broader;
+  sh:name "broader"@en;
+  sh:nodeKind sh:IRI;
+  sh:node <https://data.europarl.europa.eu/def/controlled-vocabulariesConcept>;
+  sh:deactivated "true"^^xsd:boolean .
+
+<https://data.europarl.europa.eu/def/controlled-vocabulariesP30> owl:versionInfo "0.1";
+  sh:path skos:exactMatch;
+  sh:name "exact match"@en;
+  sh:nodeKind sh:IRI;
+  sh:node <https://data.europarl.europa.eu/def/controlled-vocabulariesConceptReference>;
+  sh:pattern "https://publications.europa.eu/resource/authority/.*$";
+  sh:deactivated "true"^^xsd:boolean .
+
+<https://data.europarl.europa.eu/def/controlled-vocabulariesP31> owl:versionInfo "0.1";
+  sh:path skos:broadMatch;
+  sh:name "broad match"@en;
+  sh:nodeKind sh:IRI;
+  sh:node <https://data.europarl.europa.eu/def/controlled-vocabulariesConceptReference>;
+  sh:pattern "https://publications.europa.eu/resource/authority/.*$";
+  sh:deactivated "true"^^xsd:boolean .
+
+<https://data.europarl.europa.eu/def/controlled-vocabulariesP32> owl:versionInfo "0.1";
+  sh:path owl:deprecated;
+  sh:name "deprecated"@en;
+  sh:nodeKind sh:Literal;
+  sh:datatype xsd:boolean .
+
+<https://data.europarl.europa.eu/def/controlled-vocabulariesP33> owl:versionInfo "0.1";
+  sh:path skos:scopeNote;
+  sh:name "scope note"@en;
+  sh:nodeKind sh:Literal;
+  sh:datatype rdf:langString .
+
+<https://data.europarl.europa.eu/def/controlled-vocabulariesP36> owl:versionInfo "0.3";
+  sh:path rdf:type;
+  sh:name "type"@en;
+  sh:nodeKind sh:IRI;
+  sh:hasValue skos:Concept;
+  sh:deactivated "true"^^xsd:boolean .
+
+<https://data.europarl.europa.eu/def/controlled-vocabulariesConceptReference> a sh:NodeShape;
+  sh:property <https://data.europarl.europa.eu/def/controlled-vocabulariesP36>;
+  owl:versionInfo "0.3";
+  rdfs:comment "This node shape refers to the class skos:Concept"@en;
+  skos:example "http://publications.europa.eu/resource/authority/procedure/COD";
+  sh:nodeKind sh:IRI;
+  sh:pattern "http://publications.europa.eu/resource/authority/.*$";
+  sh:closed "true"^^xsd:boolean;
+  rdfs:label "Reference to a Concept (EU Authority Table)"@en;
+  sh:order "3"^^xsd:integer .
+
+<https://data.europarl.europa.eu/def/controlled-vocabularies#> a owl:Ontology, adms:Asset;
+  dcterms:type <https://publications.europa.eu/resource/authority/dataset-type/APROF>;
+  rdfs:label "Controlled Vocabularies dataset description"@en;
+  dcterms:title "Controlled Vocabularies dataset description"@en;
+  dcterms:description "This Dataset Description is a subset of the general SKOS-EP application profile and it includes classes and properties used in the controlled vocabularies datasets. Descriptions of classes and properties can be found in SKOS-EP application profile."@en;
+  owl:versionInfo "0.3";
+  adms:versionNotes """0.3 - 2024-03-05
+- (new) add dcterms:creator
+
+0.2 - 2024-01-30
+- (rfc) dcterms:created and dcterms:modified changed datatype to xsd:date instead of xsd:dateTime
+
+0.1 - 2024-01-24
+- creation"""@en;
+  adms:status <https://publications.europa.eu/resource/authority/dataset-status/DEVELOP>;
+  owl:versionIRI <https://data.europarl.europa.eu/def/controlled-vocabularies#>;
+  dcterms:conformsTo <https://www.w3.org/TR/shacl>;
+  dcterms:created "2024-01-24"^^xsd:date;
+  dcterms:modified "2024-03-05T00:00:00.000Z"^^xsd:dateTime;
+  dcterms:dateCopyrighted "2024"^^xsd:gYear;
+  dcterms:license <https://www.europarl.europa.eu/legal-notice/>;
+  dcterms:creator <https://publications.europa.eu/resource/authority/corporate-body/EP>;
+  dcterms:publisher <https://publications.europa.eu/resource/authority/corporate-body/EP>;
+  dcterms:rigthsHolder <https://publications.europa.eu/resource/authority/corporate-body/EURUN>;
+  dcat:distribution _:a4aeb3f30c2042e3b539bc99a24f35721740 .
+
+_:a4aeb3f30c2042e3b539bc99a24f35721740 dcterms:format <https://www.iana.org/assignments/media-types/text/turtle>;
+  dcat:downloadURL <https://europarl.github.io/skos-ep/dsd/controlled-vocabularies.shacl.ttl> .

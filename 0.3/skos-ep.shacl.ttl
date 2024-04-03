@@ -1,0 +1,255 @@
+@prefix schema: <http://schema.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos-ep: <https://data.europarl.europa.eu/def/skos-ep#> .
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix eli: <http://data.europa.eu/eli/ontology#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix xls2rdf: <https://xls2rdf.sparna.fr/vocabulary#> .
+@prefix eli-dl: <http://data.europa.eu/eli/eli-draft-legislation-ontology#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix shacl-play: <https://shacl-play.sparna.fr/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix person: <http://www.w3.org/ns/person#> .
+@prefix epvoc: <https://data.europarl.europa.eu/def/epvoc#> .
+@prefix op-aut: <http://publications.europa.eu/resource/authority/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+
+<https://data.europarl.europa.eu/def/skos-ep#> a owl:Ontology, adms:Asset;
+  dcterms:type <https://publications.europa.eu/resource/authority/dataset-type/APROF>;
+  rdfs:label "SKOS-EP Application Profile"@en;
+  dcterms:title "SKOS-EP Application Profile"@en;
+  dcterms:description "SKOS-EP is an application profile of the SKOS vocabulary, designed and used for describing the controlled vocabularies defined by the European Parliament."@en;
+  owl:versionInfo "0.3";
+  adms:versionNotes """0.3 - 2024-03-05
+- minor changes
+
+0.2 - 2024-01-24
+- review
+
+0.1 - 2023-10-17 
+- first draft creation"""@en;
+  vann:usageNote "This version of SKOS-EP is a draft specification and may be updated, replaced or obsoleted by other documents at any time. It is inappropriate to cite this document as other than work in progress."@en;
+  adms:status <https://publications.europa.eu/resource/authority/dataset-status/DEVELOP>;
+  owl:versionIRI <https://data.europarl.europa.eu/def/skos-ep#>;
+  dcterms:conformsTo <https://www.w3.org/TR/shacl>;
+  dcterms:created "2023-10-17"^^xsd:date;
+  dcterms:modified "2024-03-05T00:00:00.000Z"^^xsd:dateTime;
+  dcterms:dateCopyrighted "2023"^^xsd:gYear;
+  dcterms:license <https://www.europarl.europa.eu/legal-notice/>;
+  dcterms:creator <https://publications.europa.eu/resource/authority/corporate-body/EP>;
+  dcterms:publisher <https://publications.europa.eu/resource/authority/corporate-body/EP>;
+  dcterms:rigthsHolder <https://publications.europa.eu/resource/authority/corporate-body/EURUN>;
+  dcat:distribution _:a4aeb3f30c2042e3b539bc99a24f35721742 .
+
+_:a4aeb3f30c2042e3b539bc99a24f35721742 dcterms:format <https://www.iana.org/assignments/media-types/text/turtle>;
+  dcat:downloadURL <https://europarl.github.io/skos-ep/skos-ep.shacl.ttl> .
+
+skos:ConceptScheme a sh:NodeShape, rdfs:Class;
+  owl:versionInfo "0.2";
+  sh:targetClass skos:ConceptScheme;
+  skos:example "https://data.europarl.europa.eu/def/ep-procedure-types";
+  sh:nodeKind sh:IRI;
+  sh:pattern "^https://data.europarl.europa.eu/def/[A-Za-z0-9\\-_]+$";
+  sh:closed "true"^^xsd:boolean;
+  sh:ignoredProperties _:a4aeb3f30c2042e3b539bc99a24f35721743;
+  rdfs:label "Concept Scheme"@en;
+  sh:order "1"^^xsd:integer;
+  sh:property skos-ep:P9, skos-ep:P11, skos-ep:P12, skos-ep:P14, skos-ep:P15, skos-ep:P16,
+    skos-ep:P17 .
+
+_:a4aeb3f30c2042e3b539bc99a24f35721743 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+skos:Concept a sh:NodeShape, rdfs:Class;
+  owl:versionInfo "0.2";
+  sh:targetClass skos:Concept;
+  skos:example "https://data.europarl.europa.eu/def/ep-procedure-types/COD";
+  sh:nodeKind sh:IRI;
+  sh:pattern "^https://data.europarl.europa.eu/def/[A-Za-z0-9\\-_]+/[A-Z\\-_]+$";
+  sh:closed "true"^^xsd:boolean;
+  sh:ignoredProperties _:a4aeb3f30c2042e3b539bc99a24f35721744;
+  rdfs:label "Concept"@en;
+  sh:order "2"^^xsd:integer;
+  sh:property skos-ep:P22, skos-ep:P23, skos-ep:P24, skos-ep:P25, skos-ep:P26, skos-ep:P27,
+    skos-ep:P28, skos-ep:P29, skos-ep:P30, skos-ep:P32, skos-ep:P33, skos-ep:P35, skos-ep:P36 .
+
+_:a4aeb3f30c2042e3b539bc99a24f35721744 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+skos-ep:P9 owl:versionInfo "0.2";
+  sh:path dcterms:identifier;
+  sh:name "identifier"@en;
+  sh:minCount "1"^^xsd:integer;
+  sh:maxCount "1"^^xsd:integer;
+  sh:nodeKind sh:Literal;
+  sh:datatype xsd:string;
+  shacl-play:shortname "identifier" .
+
+skos-ep:P11 owl:versionInfo "0.1";
+  sh:path dcterms:title;
+  sh:name "title"@en;
+  sh:minCount "1"^^xsd:integer;
+  sh:nodeKind sh:Literal;
+  sh:datatype rdf:langString;
+  sh:uniqueLang "true"^^xsd:boolean;
+  shacl-play:shortname "title_dcterms" .
+
+skos-ep:P12 owl:versionInfo "0.2";
+  sh:path dcterms:description;
+  sh:name "description"@en;
+  sh:minCount "1"^^xsd:integer;
+  sh:nodeKind sh:Literal;
+  sh:datatype rdf:langString;
+  sh:uniqueLang "true"^^xsd:boolean;
+  shacl-play:shortname "description" .
+
+skos-ep:P14 owl:versionInfo "0.3";
+  sh:path dcterms:creator;
+  sh:name "creator"@en;
+  sh:minCount "1"^^xsd:integer;
+  sh:nodeKind sh:IRI;
+  sh:hasValue <https://publications.europa.eu/resource/authority/corporate-body/EP>;
+  shacl-play:shortname "creator" .
+
+skos-ep:P15 owl:versionInfo "0.2";
+  sh:path dcterms:created;
+  sh:name "created"@en;
+  sh:minCount "1"^^xsd:integer;
+  sh:maxCount "1"^^xsd:integer;
+  sh:nodeKind sh:Literal;
+  sh:datatype xsd:date;
+  shacl-play:shortname "created" .
+
+skos-ep:P16 owl:versionInfo "0.2";
+  sh:path dcterms:modified;
+  sh:name "modified"@en;
+  sh:minCount "1"^^xsd:integer;
+  sh:maxCount "1"^^xsd:integer;
+  sh:nodeKind sh:Literal;
+  sh:datatype xsd:date;
+  shacl-play:shortname "modified" .
+
+skos-ep:P17 owl:versionInfo "0.1";
+  sh:path owl:versionInfo;
+  sh:name "version info"@en;
+  sh:minCount "1"^^xsd:integer;
+  sh:maxCount "1"^^xsd:integer;
+  sh:nodeKind sh:Literal;
+  sh:datatype xsd:string;
+  shacl-play:shortname "versionInfo" .
+
+skos-ep:P22 owl:versionInfo "0.2";
+  sh:path dcterms:identifier;
+  sh:name "identifier"@en;
+  sh:minCount "1"^^xsd:integer;
+  sh:maxCount "1"^^xsd:integer;
+  sh:nodeKind sh:Literal;
+  sh:datatype xsd:string;
+  shacl-play:shortname "identifier" .
+
+skos-ep:P23 owl:versionInfo "0.2";
+  sh:path dcterms:created;
+  sh:name "created"@en;
+  sh:minCount "1"^^xsd:integer;
+  sh:maxCount "1"^^xsd:integer;
+  sh:nodeKind sh:Literal;
+  sh:datatype xsd:date;
+  shacl-play:shortname "created" .
+
+skos-ep:P24 owl:versionInfo "0.1";
+  sh:path skos:definition;
+  sh:name "definition"@en;
+  sh:minCount "1"^^xsd:integer;
+  sh:nodeKind sh:Literal;
+  sh:datatype rdf:langString;
+  sh:uniqueLang "true"^^xsd:boolean;
+  shacl-play:shortname "definition" .
+
+skos-ep:P25 owl:versionInfo "0.2";
+  sh:path skos:notation;
+  sh:name "notation"@en;
+  sh:nodeKind sh:Literal;
+  sh:datatype xsd:string;
+  shacl-play:shortname "notation" .
+
+skos-ep:P26 owl:versionInfo "0.1";
+  sh:path skos:prefLabel;
+  sh:name "preferred label"@en;
+  sh:minCount "1"^^xsd:integer;
+  sh:nodeKind sh:Literal;
+  sh:datatype rdf:langString;
+  sh:uniqueLang "true"^^xsd:boolean;
+  shacl-play:shortname "#prefLabel" .
+
+skos-ep:P27 owl:versionInfo "0.3";
+  sh:path skos:altLabel;
+  sh:name "alternative label"@en;
+  sh:nodeKind sh:Literal;
+  sh:datatype rdf:langString;
+  sh:uniqueLang "true"^^xsd:boolean;
+  shacl-play:shortname "altLabel" .
+
+skos-ep:P28 owl:versionInfo "0.1";
+  sh:path skos:inScheme;
+  sh:name "in scheme"@en;
+  sh:minCount "1"^^xsd:integer;
+  sh:nodeKind sh:IRI;
+  sh:class skos:ConceptScheme;
+  shacl-play:shortname "inScheme" .
+
+skos-ep:P29 owl:versionInfo "0.1";
+  sh:path skos:topConceptOf;
+  sh:name "top concept of"@en;
+  sh:nodeKind sh:IRI;
+  sh:class skos:ConceptScheme;
+  shacl-play:shortname "topConceptOf" .
+
+skos-ep:P30 owl:versionInfo "0.1";
+  sh:path skos:broader;
+  sh:name "broader"@en;
+  sh:nodeKind sh:IRI;
+  sh:class skos:Concept;
+  shacl-play:shortname "broader" .
+
+skos-ep:P32 owl:versionInfo "0.1";
+  sh:path skos:exactMatch;
+  sh:name "exact match"@en;
+  sh:nodeKind sh:IRI;
+  sh:pattern "http://publications.europa.eu/resource/authority/.*$";
+  shacl-play:shortname "exactMatch" .
+
+skos-ep:P33 owl:versionInfo "0.1";
+  sh:path skos:broadMatch;
+  sh:name "broad match"@en;
+  sh:nodeKind sh:IRI;
+  sh:pattern "http://publications.europa.eu/resource/authority/.*$";
+  shacl-play:shortname "broadMatch" .
+
+skos-ep:P35 owl:versionInfo "0.1";
+  sh:path owl:deprecated;
+  sh:name "deprecated"@en;
+  sh:nodeKind sh:Literal;
+  sh:datatype xsd:boolean;
+  shacl-play:shortname "deprecated" .
+
+skos-ep:P36 owl:versionInfo "0.1";
+  sh:path skos:scopeNote;
+  sh:name "scope note"@en;
+  sh:nodeKind sh:Literal;
+  sh:datatype rdf:langString;
+  shacl-play:shortname "scopeNote" .
