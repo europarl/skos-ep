@@ -6,4 +6,15 @@ SKOS-EP is an application profile of the [W3C Simple Knowledge Organization Syst
 
 ## Versions
 
-No versions available yet.
+- Latest version:
+  - [HTML](./index.html)
+  - [SHACL](./skos-ep.shacl.ttl)
+- [Version 0.3](./0.3/)
+
+## SKOS-EP at a glance
+
+![SKOS-EP diagram](skos-ep.svg)
+
+## Licence
+
+SKOS-EP is distributed under the terms and conditions described in the [European Parliament Legal Notice](https://www.europarl.europa.eu/legal-notice/).
