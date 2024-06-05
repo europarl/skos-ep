@@ -9,7 +9,7 @@ SKOS-EP is an application profile of the [W3C Simple Knowledge Organization Syst
 - Latest version:
   - [HTML](./index.html)
   - [SHACL](./skos-ep.shacl.ttl)
-- [Version 0.3](./0.3/)
+- [Version 0.4](./0.4/)
 
 ## SKOS-EP at a glance
 
