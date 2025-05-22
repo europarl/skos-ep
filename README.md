@@ -17,4 +17,4 @@ SKOS-EP is an application profile of the [W3C Simple Knowledge Organization Syst
 
 ## Licence
 
-SKOS-EP is distributed under the terms and conditions described in the [European Parliament Legal Notice](https://www.europarl.europa.eu/legal-notice/).
+SKOS-EP is distributed under the terms and conditions described in the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
